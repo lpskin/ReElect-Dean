@@ -144,6 +144,49 @@
     .hero h1,.hero h1 .accent{text-shadow:2px 3px 4px rgba(0,0,0,.88);}
   }
 
+
+  /* Full-width leadership highlights */
+  .hero-points{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    width:min(1280px,calc(100% - 48px));
+    padding:0;
+    font-size:clamp(20px,1.65vw,27px);
+    line-height:1.12;
+  }
+  .hero-points span{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:104px;
+    padding:20px 18px;
+    text-align:center;
+  }
+  .hero-points .service-commitment{
+    flex-direction:column;
+    gap:5px;
+  }
+  .service-commitment strong,
+  .service-commitment small{
+    display:block;
+    white-space:nowrap;
+    font:inherit;
+  }
+  .service-commitment strong{font-weight:800;}
+  @media(max-width:900px){
+    .hero-points{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      font-size:clamp(18px,3.7vw,24px);
+    }
+    .hero-points span:nth-child(3){border-left:0;border-top:1px solid rgba(11,120,208,.28);}
+    .hero-points span:nth-child(4){border-top:1px solid rgba(11,120,208,.28);}
+  }
+  @media(max-width:560px){
+    .hero-points{grid-template-columns:1fr;width:calc(100% - 32px);}
+    .hero-points span{min-height:72px;border-left:0!important;border-top:1px solid rgba(11,120,208,.28);}
+    .hero-points span:first-child{border-top:0;}
+  }
+
 </style>
 </head>
 <body>
@@ -185,7 +228,7 @@
 <div class="hero-points">
   <span>Experienced leadership</span>
   <span>Proven Track Record</span>
-  <span>Commitment to Public Service</span>
+  <span class="service-commitment"><strong>Commitment</strong><small>to Public Service</small></span>
   <span>Independent Voice</span>
 </div>
 <section class="story">
