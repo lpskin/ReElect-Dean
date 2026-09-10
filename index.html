@@ -7,7 +7,7 @@
 <meta name="description" content="Dean Francois — four decades in Hermosa Beach, four years on the council. Experienced. Independent. Community minded.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#FFFFFF; --cream-deep:#F2F7FC; --navy:#0B78D0; --navy-deep:#0866B5;
@@ -202,6 +202,11 @@
   .platform-contact-btn{display:inline-block;padding:13px 24px;border-radius:999px;background:var(--navy);color:#fff;font-family:'Outfit',sans-serif;font-weight:700;text-decoration:none;white-space:nowrap;}
   .platform-contact-btn:hover{background:var(--navy-deep);}
 
+
+  .story-heading{position:relative;margin:0 0 26px;padding-bottom:16px;color:var(--navy);font-size:clamp(30px,3vw,43px);}
+  .story-heading::after{content:'';position:absolute;left:0;bottom:0;width:84px;height:5px;border-radius:999px;background:var(--gold);}
+  .dean-signature{margin:18px 0 0!important;color:var(--navy)!important;font-family:'Caveat',cursive;font-size:54px;font-weight:600;line-height:1;transform:rotate(-4deg);transform-origin:left center;}
+
 </style>
 </head>
 <body>
@@ -253,11 +258,13 @@
         <source src="https://video.wixstatic.com/video/d5c3fe_e33a113ea93b4ce8abd051227653e0f5/1080p/mp4/file.mp4" type="video/mp4">
       </video>
     </div>
-    <div>
+    <div class="story-statement">
+      <h2 class="story-heading">Why I’m Running for Re-Election</h2>
       <p>I’ve served on the Hermosa Beach City Council for four years, and it’s been an honor to represent the best little beach city in the world.</p>
       <p>I ran because I love this town — its beach culture, its small-town atmosphere, and its people. I’m engaged in that culture every day, and I believe it matters to have a council member who is truly part of it.</p>
       <p>Over the last four years I’ve focused on protecting what makes Hermosa special, cutting red tape so businesses can thrive, and making sure residents feel good about calling Hermosa home. I’ve also experienced firsthand the public safety and traffic challenges facing our community — it’s an issue that’s dear to my heart, and I’m committed to improving safety for residents, businesses, and visitors.</p>
       <p>As we enter a period of tighter budgets, we have to be more fiscally accountable than ever. I’ll keep pushing for greater transparency and fiscal discipline at City Hall, so every dollar is spent wisely and every voice is heard.</p>
+      <p class="dean-signature" aria-label="Signed, Dean">Dean</p>
     </div>
   </div>
 </section>
