@@ -103,6 +103,47 @@
     .story-grid{width:calc(100% - 32px);}
     .priority{grid-template-columns:48px 1fr;}
   }
+
+  /* Blue photo transition and headline drop shadow */
+  .hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    background:linear-gradient(
+      90deg,
+      #6EB7DC 0%,
+      #6EB7DC 38%,
+      rgba(110,183,220,.96) 46%,
+      rgba(110,183,220,.78) 54%,
+      rgba(110,183,220,.42) 62%,
+      rgba(110,183,220,0) 72%
+    );
+  }
+  .hero-photo::before{display:none;}
+  .hero-copy{width:66%;z-index:2;padding-right:20px;}
+  .hero h1{
+    text-shadow:3px 4px 5px rgba(0,0,0,.88);
+  }
+  .hero h1 .accent{
+    color:var(--gold);
+    text-shadow:3px 4px 5px rgba(0,0,0,.88);
+  }
+  @media(max-width:900px){
+    .hero::after{
+      background:linear-gradient(
+        180deg,
+        rgba(110,183,220,0) 24%,
+        rgba(110,183,220,.52) 48%,
+        rgba(110,183,220,.92) 70%,
+        #6EB7DC 88%
+      );
+    }
+    .hero-copy{width:100%;padding-right:24px;}
+    .hero h1,.hero h1 .accent{text-shadow:2px 3px 4px rgba(0,0,0,.88);}
+  }
+
 </style>
 </head>
 <body>
