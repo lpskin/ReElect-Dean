@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issues — Dean Francois for Hermosa Beach City Council</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFFFFF; --cream-deep:#F2F7FC; --navy:#0B78D0; --navy-deep:#0866B5;
+    --gold:#F99F1A; --gold-deep:#E08C12; --ink:#122033; --muted:#3E5163;
+    --line:rgba(11,120,208,0.16); --max:820px;
+  }
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--cream); color:var(--ink); font-family:'Source Sans 3', sans-serif; font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Outfit', sans-serif; font-weight:700; line-height:1.1; margin:0; letter-spacing:-0.02em; color:var(--navy);}
+  a{color:inherit;} .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  header{position:sticky; top:0; z-index:50; background:var(--cream); border-bottom:1px solid var(--line);}
+  .nav{display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:20px; padding:14px 28px; max-width:1280px; margin:0 auto;}
+  .nav-brand{display:flex; align-items:center; gap:10px;}
+  .nav-left{display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; color:var(--navy);}
+  .nav-left a{text-decoration:none; opacity:0.88; padding:0 18px; border-left:1px solid rgba(11,120,208,0.28);}
+  .nav-left a:first-child{border-left:0;}
+  .nav-left a:hover, .nav-left a.active{opacity:1;}
+  .brand{display:inline-block; text-align:left; text-decoration:none; color:var(--navy); font-family:'Outfit', sans-serif;}
+  .brand .reelect{display:block; font-family:'Outfit', sans-serif; font-size:13px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); line-height:1; margin:0 0 4px;}
+  .brand .name{display:block; font-size:30px; font-weight:800; letter-spacing:0.02em; line-height:1;}
+  .brand .office{display:block; width:100%; box-sizing:border-box; margin-top:6px; text-align:center; background:var(--gold); color:#fff; font-size:12px; font-weight:700; padding:4px 8px; line-height:1.2;}
+  .nav-right{display:flex; justify-content:flex-end; align-items:center; gap:12px;}
+  .icon-btn{width:36px; height:36px; border-radius:50%; border:1.5px solid var(--navy); color:var(--navy); display:inline-flex; align-items:center; justify-content:center; text-decoration:none;}
+  .icon-btn svg{width:16px; height:16px; fill:currentColor;}
+  .btn-donate{display:inline-block; border:1.5px solid var(--navy); background:var(--navy); color:#fff; padding:8px 18px; border-radius:999px; font-family:'Outfit', sans-serif; font-weight:700; font-size:13px; letter-spacing:0.06em; text-decoration:none; text-transform:uppercase;}
+  .btn-donate:hover{background:var(--navy-deep); border-color:var(--navy-deep); color:#fff;}
+  .menu-btn{display:none; background:none; border:0; padding:8px; cursor:pointer;}
+  .menu-btn span{display:block; width:22px; height:2px; background:var(--navy); margin:5px 0;}
+  .page-head{padding:64px 0 28px;}
+  .page-head .kicker{font-family:'Outfit',sans-serif; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; font-size:13px; color:var(--gold-deep); margin-bottom:12px;}
+  .page-head h1{font-size:clamp(40px,6vw,64px);}
+  .page-head p{font-size:19px; color:var(--muted); max-width:52ch; margin-top:16px;}
+  .issue{padding:36px 0; border-top:1px solid var(--line);}
+  .issue .cat{font-family:'Outfit',sans-serif; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; font-size:13px; color:var(--gold-deep); margin-bottom:8px;}
+  .issue h2{font-size:30px; margin-bottom:14px;} .issue p{color:#2b3843; margin:0 0 16px;}
+  .plan{font-weight:700; color:var(--navy); margin:20px 0 12px;}
+  .issue ul{margin:0; padding:0; list-style:none;}
+  .issue li{padding:10px 0 10px 18px; position:relative; border-top:1px solid var(--line); color:#2b3843;}
+  .issue li:first-of-type{border-top:none;}
+  .issue li::before{content:''; position:absolute; left:0; top:19px; width:7px; height:7px; border-radius:50%; background:var(--gold);}
+  .cta-strip{background:var(--navy-deep); color:#fff; padding:48px 0; margin-top:12px;}
+  .cta-inner{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; max-width:1120px; margin:0 auto; padding:0 28px;}
+  .cta-inner h3{color:#fff; font-size:26px; max-width:20ch;}
+  .btn{display:inline-block; padding:13px 26px; border-radius:999px; font-family:'Outfit',sans-serif; font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; border:1.5px solid transparent;}
+  .btn-primary{background:var(--gold); color:#fff;} .btn-ghost{border-color:#fff; color:#fff;}
+  footer{background:var(--cream-deep); padding:28px 0; font-size:13.5px; color:#6b7883; text-align:center;}
+  @media (max-width:900px){
+    .nav{grid-template-columns:auto 1fr auto; padding:12px 18px;}
+    .nav-left{display:none;}
+    .nav-left.open{display:flex; flex-direction:column; gap:14px; position:absolute; top:100%; left:0; right:0; background:var(--cream); padding:18px 24px 22px; border-bottom:1px solid var(--line);}
+    .nav-left.open a{border-left:0; padding:0;}
+    .menu-btn{display:block;} .brand .name{font-size:22px;}
+  }
+
+  /* Mural-inspired edition */
+  :root{
+    --mural-lime:#c9db63; --mural-green:#8fb58b; --mural-blue:#0874bd;
+    --mural-sky:#35a7d7; --mural-aqua:#67c7d4; --mural-coral:#ee8a62;
+    --mural-yellow:#f5d561; --mural-pink:#d56ba3; --mural-purple:#574065;
+    --mural-indigo:#283f82; --mural-white:#f7f8f1; --mural-ink:#183b67;
+  }
+  body{background:var(--mural-lime);color:var(--mural-ink);overflow-x:hidden}
+  header{background:rgba(247,248,241,.96);border-bottom:5px solid var(--mural-yellow)}
+  .brand,.nav-left,.navlinks a,h1,h2,h3,h4{color:var(--mural-indigo)}
+  .brand .reelect,.kicker,.issue-num{color:var(--mural-coral)}
+  .brand .office,.btn-donate,.btn-primary,.nav-cta{background:var(--mural-coral);border-color:var(--mural-indigo)}
+  .hero{background:var(--mural-blue) url('../assets/mural-reference.webp') center/cover no-repeat;border:8px solid var(--mural-indigo);border-radius:0 120px 0 120px;box-shadow:18px 18px 0 var(--mural-coral)}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,63,130,.92),rgba(8,116,189,.28) 58%,transparent);z-index:1}
+  .hero-copy{z-index:3}.hero h1{color:var(--mural-white);text-shadow:4px 4px 0 var(--mural-indigo)}
+  .hero h1 .accent{color:var(--mural-yellow)}
+  .hero-photo{z-index:2;border-left:8px solid var(--mural-yellow)}
+  .hero-photo img{mix-blend-mode:normal}
+  .hero-points{background:var(--mural-white);color:var(--mural-indigo);border:4px solid var(--mural-indigo);margin-top:24px;border-radius:999px}
+  .story,.endorse,#endorsements,.page-head,.issues{background:var(--mural-white)}
+  .story-grid{position:relative}.story-grid::before{content:'';position:absolute;width:140px;height:140px;border-radius:50%;background:var(--mural-pink);right:-80px;top:-45px;z-index:0}
+  .story-grid>*{position:relative;z-index:1}
+  .story-video{border:7px solid var(--mural-indigo);box-shadow:-14px 14px 0 var(--mural-yellow);border-radius:40px 0 40px 0;overflow:hidden}
+  .priorities,#platform{background:var(--mural-blue);position:relative;overflow:hidden}
+  .priorities::before,#platform::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 12% 18%,var(--mural-yellow) 0 34px,transparent 35px),radial-gradient(circle at 88% 28%,var(--mural-pink) 0 48px,transparent 49px),radial-gradient(circle at 74% 78%,var(--mural-aqua) 0 30px,transparent 31px);opacity:.95}
+  .priorities .wrap,#platform .wrap{position:relative}
+  .priority,.pillar{background:var(--mural-white);color:var(--mural-ink);border:5px solid var(--mural-indigo);margin:18px 0;padding:26px;border-radius:48px 8px 48px 8px;box-shadow:12px 12px 0 var(--mural-coral)}
+  .priority .num{color:var(--mural-coral)}.priority h3,.pillar h3{color:var(--mural-indigo)}
+  .priority p,.pillar p{color:var(--mural-ink)}
+  .record{background:var(--mural-purple);border-top:14px solid var(--mural-yellow)}
+  .record-cols li{border-color:rgba(247,248,241,.28)}
+  .endorse-grid blockquote{background:var(--mural-yellow);padding:28px;border:5px solid var(--mural-indigo);border-radius:8px 52px 8px 52px}
+  blockquote p{color:var(--mural-indigo)}
+  .voter,.voter-banner,.cta-strip{background:var(--mural-coral);border-top:8px solid var(--mural-indigo);border-bottom:8px solid var(--mural-yellow)}
+  footer{background:var(--mural-green)}
+  .btn,.btn-donate,.nav-cta{border-radius:999px}
+  .see-all{color:var(--mural-indigo);border-color:var(--mural-yellow)}
+  details{background:var(--mural-white);border:4px solid var(--mural-indigo);margin:18px 0;padding:0 24px;border-radius:10px 46px 10px 46px;box-shadow:9px 9px 0 var(--mural-sky)}
+  details:nth-child(2n){box-shadow:9px 9px 0 var(--mural-coral)}
+  details:nth-child(3n){box-shadow:9px 9px 0 var(--mural-yellow)}
+  .toggle{border-color:var(--mural-indigo);background:var(--mural-lime)}
+  @media(max-width:900px){.hero{border-radius:0 56px 0 56px;box-shadow:9px 9px 0 var(--mural-coral)}.hero::after{background:linear-gradient(180deg,transparent,rgba(40,63,130,.9))}.hero-photo{border-left:0;border-bottom:7px solid var(--mural-yellow)}.hero-points{border-radius:28px}}
+
+
+  .mural-banner{height:clamp(220px,38vw,480px);background:url('../assets/mural-reference.webp') center/cover no-repeat;border-bottom:12px solid var(--mural-yellow)}
+  .page-head{margin-top:0;padding-top:54px}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <div class="nav-brand">
+      <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLeft').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <a class="brand" href="index.html"><span class="reelect">Re-Elect</span><span class="name">Dean Francois</span><span class="office">Hermosa Beach City Council</span></a>
+    </div>
+    <div class="nav-left" id="navLeft">
+      <a href="index.html">Home</a>
+      <a href="issues.html" class="active">Issues</a>
+      <a href="index.html#record">Involvement</a>
+      <a href="index.html#endorsements">Endorsements</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a class="icon-btn" href="https://www.facebook.com/DeanforHermosaBeachCityCouncil/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.6.4-1 1-1z"/></svg></a>
+      <a class="btn-donate" href="https://www.efundraisingconnections.com/c/FrancoisforCouncil2026" target="_blank" rel="noopener">Donate</a>
+    </div>
+  </nav>
+</header>
+<div class="page-head wrap">
+  <div class="kicker">Where Dean Stands</div>
+  <h1>Issues</h1>
+  <p>Four years on the council and four decades in Hermosa have shaped a clear set of priorities. Here’s where Dean stands, and what he’s pushing for next.</p>
+</div>
+<section class="issue wrap" id="safety">
+  <div class="cat">Public Safety & Traffic</div>
+  <h2>Making Hermosa’s streets safer</h2>
+  <p>Public safety and traffic are the issues Dean hears about most from residents — and ones he’s lived firsthand, both as a longtime Hermosa resident and through years chairing Redondo Beach’s Traffic, Public Works & Preservation Commission. As a CERT member and Red Cross disaster volunteer, he also brings hands-on emergency-response experience to the table.</p>
+  <p class="plan">Dean’s plan: push concrete safety fixes at the corridors and intersections residents raise most, and keep the city’s emergency-response capacity strong.</p>
+  <ul>
+    <li>Prioritize traffic-calming and pedestrian-safety improvements at the intersections residents flag most often</li>
+    <li>Strengthen coordination between Hermosa Beach Police, Fire, and CERT volunteers on emergency preparedness</li>
+    <li>Support the Hermosa Beach Bicycle Masterplan to make streets safer for cyclists and pedestrians alike</li>
+    <li>Expand community disaster-readiness training, drawing on his own Red Cross and CERT experience</li>
+  </ul>
+</section>
+<section class="issue wrap" id="fiscal">
+  <div class="cat">Fiscal Accountability</div>
+  <h2>Real transparency at City Hall</h2>
+  <p>As Hermosa heads into a period of tighter budgets, Dean believes the city has to be more disciplined and more transparent about where every dollar goes — not less. Residents shouldn’t have to dig to understand how their city is spending their money.</p>
+  <p class="plan">Dean’s plan: push for clearer public reporting on city spending, and hold new spending commitments to a higher bar.</p>
+  <ul>
+    <li>Support clear, accessible public reporting on city budget decisions</li>
+    <li>Scrutinize new spending commitments against the city’s tightening fiscal outlook</li>
+    <li>Prioritize efficiency in core services over new financial obligations</li>
+    <li>Ensure resident and business input is heard before major fiscal decisions are finalized</li>
+  </ul>
+</section>
+<section class="issue wrap" id="business">
+  <div class="cat">Small Business & Red Tape</div>
+  <h2>Cutting the friction that hurts local business</h2>
+  <p>Hermosa’s small businesses are core to what makes downtown work, and Dean has focused on reducing the bureaucratic friction that makes it harder than it should be to open, run, or grow a business here.</p>
+  <p class="plan">Dean’s plan: keep cutting red tape so Hermosa’s business community can thrive.</p>
+  <ul>
+    <li>Streamline permitting processes for local businesses</li>
+    <li>Reduce unnecessary regulatory friction that slows down small business owners</li>
+    <li>Support policies that keep downtown Hermosa’s business district competitive and vibrant</li>
+  </ul>
+</section>
+<section class="issue wrap" id="environment">
+  <div class="cat">Environment & Coastal Protection</div>
+  <h2>Protecting the coastline that defines Hermosa</h2>
+  <p>Dean’s environmental commitment goes back decades — as an elected Sierra Club board member for the Palos Verdes/South Bay Group, a long-time Heal the Bay volunteer, and a Storm Water Monitor & Educator with Santa Monica Baykeeper/LA Waterkeeper. That work is personal: Hermosa’s beach and coastline are why most of us live here.</p>
+  <p class="plan">Dean’s plan: bring that hands-on environmental experience directly into city policy.</p>
+  <ul>
+    <li>Advocate for clean coastal waters and beach water-quality protections</li>
+    <li>Apply his Sierra Club and Baykeeper experience to local environmental decisions</li>
+    <li>Support programs and partnerships that protect Hermosa’s beaches for the long term</li>
+  </ul>
+</section>
+<section class="issue wrap" id="character">
+  <div class="cat">Preserving Hermosa’s Character</div>
+  <h2>Growth without losing what makes Hermosa, Hermosa</h2>
+  <p>Dean has spent four decades in this community, including time with the Hermosa Beach Historical Society and Sister City Association. He believes growth and development shouldn’t come at the cost of the small-town beach character that brought most residents here in the first place.</p>
+  <p class="plan">Dean’s plan: balance new development with the character and history residents care about.</p>
+  <ul>
+    <li>Weigh new development against its impact on Hermosa’s small-town character</li>
+    <li>Support preservation of community landmarks and local history</li>
+    <li>Keep decision-making grounded in resident input, not just developer interest</li>
+  </ul>
+</section>
+<div class="cta-strip">
+  <div class="cta-inner">
+    <h3>Want to help move these priorities forward?</h3>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a class="btn btn-primary" href="https://www.efundraisingconnections.com/c/FrancoisforCouncil2026" target="_blank" rel="noopener">Donate</a>
+      <a class="btn btn-ghost" href="https://www.dean4council.com/contact" target="_blank" rel="noopener">Get Involved</a>
+    </div>
+  </div>
+</div>
+<footer>Paid for by Francois for City Council 2026 ID#1491958</footer>
+</body>
+</html>
