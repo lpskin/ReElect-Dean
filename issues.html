@@ -60,6 +60,16 @@
     .nav-left.open a{border-left:0; padding:0;}
     .menu-btn{display:block;} .brand .name{font-size:22px;}
   }
+
+  .page-head.wrap{max-width:1100px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:56px;align-items:center;padding-top:48px;padding-bottom:48px;}
+  .page-head-copy p{max-width:58ch;}
+  .page-head-photo{justify-self:end;width:min(100%,300px);overflow:hidden;border-radius:6px;box-shadow:14px 14px 0 var(--gold);}
+  .page-head-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;}
+  @media(max-width:760px){
+    .page-head.wrap{grid-template-columns:1fr;gap:30px;}
+    .page-head-photo{justify-self:start;width:min(100%,320px);box-shadow:9px 9px 0 var(--gold);}
+  }
+
 </style>
 </head>
 <body>
@@ -83,9 +93,14 @@
   </nav>
 </header>
 <div class="page-head wrap">
-  <div class="kicker">Where I Stand</div>
-  <h1>Issues</h1>
-  <p>My four years on the council and four decades in Hermosa have shaped a clear set of priorities. Here’s where I stand and what I’m pushing for next.</p>
+  <div class="page-head-copy">
+    <div class="kicker">Where I Stand</div>
+    <h1>Issues</h1>
+    <p>My four years on the council and four decades in Hermosa have shaped a clear set of priorities. Here’s where I stand and what I’m pushing for next.</p>
+  </div>
+  <div class="page-head-photo">
+    <img src="assets/dean-issues.jpg" alt="Dean Francois">
+  </div>
 </div>
 <section class="issue wrap" id="safety">
   <div class="cat">Public Safety & Traffic</div>
